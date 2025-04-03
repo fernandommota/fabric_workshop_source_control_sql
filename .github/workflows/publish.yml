@@ -22,5 +22,5 @@ jobs:
     - name: Build
       run: dotnet build --no-restore=
     - name: Publish SQL project
-          run: |
-            SqlPackage /Action:Publish /SourceFile:fabric_workshop_source_control_sql/bin/Debug/fabric_workshop_source_control_sql.dacpac /TargetConnectionString:${{ secrets.SQL_CONNECTION_STRING }}
+      run: |
+        SqlPackage /Action:Publish /SourceFile:fabric_workshop_source_control_sql/bin/Debug/fabric_workshop_source_control_sql.dacpac /TargetConnectionString:${{ secrets.SQL_CONNECTION_STRING }}
